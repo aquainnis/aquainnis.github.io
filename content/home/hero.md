@@ -5,10 +5,10 @@ headless = true  # This file represents a page section.
 active = true  # Activate this widget? true/false
 weight = 10  # Order that this section will appear.
 
-title = "Academia"
+title = "Aquainnis"
 
 # Hero image (optional). Enter filename of an image in the `static/img/` folder.
-hero_media = "user-2.jpg"
+hero_media = "lightbulb.jpg"
 
 [design.background]
   # Apply a background color, gradient, or image.
@@ -34,14 +34,14 @@ hero_media = "user-2.jpg"
 #   Display link(s) by specifying a URL and label below. Icon is optional for `[cta]`.
 #   Remove a link/note by deleting a cta/note block.
 [btn]
-  url = "authors/admin/"
-  label = "Know more"
+  url = "#projects"
+  label = "About"
   
 [btn_alt]
   url = "#contact"
-  label = "Contact me"
+  label = "Contact us"
 
 +++
-## My name is **Michael Vahn** and I'm a **Professor** specializing in **Artificial Intelligence**
+## Welcome to Aquainnis
 
-Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC.
+Pioneering sustainable cloud computing and AI solutions that slash energy use without sacrificing speed or scalability.
