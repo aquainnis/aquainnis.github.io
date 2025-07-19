@@ -26,18 +26,20 @@ organizations:
   url: "https://aquainnis.com"
 
 # Short bio (displayed in user profile at end of posts)
-bio: Passionate about creating innovative solutions through technology, with expertise in software development, system architecture, and technical consulting.
+bio: Ex-Amazon executive and clean technology entrepreneur with 15+ years of experience in cloud architecture, sustainability solutions, and global business development. Proven track record of scaling teams from startup to enterprise level.
 
 # Should the user's education and interests be displayed?
 display_education: true
 
 interests:
-- Software Architecture
-- Full-Stack Development
-- Cloud Computing
-- DevOps & Automation
-- Machine Learning
-- Open Source Technologies
+- Sustainable Technology & Clean Tech
+- Cloud Architecture & AWS Solutions
+- Executive Advisory & Business Strategy
+- Identity & Access Management
+- Enterprise Architecture
+- Artificial Intelligence & Data Science
+- Global Partnership Management
+- Sustainability Frameworks & ESG
 
 education:
   courses:
@@ -85,8 +87,6 @@ user_groups:
 - Founders
 ---
 
-Luke Hargreaves is a software developer and technical consultant with a passion for creating innovative solutions through technology. As the founder of Aquainnis Pty Ltd, he specializes in full-stack development, cloud architecture, and helping organizations leverage technology to achieve their goals.
+Luke Hargreaves is an ex-Amazon executive and clean technology entrepreneur with over 15 years of experience driving innovation in cloud computing, sustainability solutions, and global business strategy. During his 6-year tenure at Amazon Web Services, he rose from Solutions Architect to Global Business Advisor, co-authoring the AWS Well-Architected Sustainability Pillar and building a global sustainability team of 300+ technical professionals. His work at AWS included developing Amazon Personalize with Domino's Pizza Enterprises and serving as a keynote speaker at major international technology conferences.
 
-With expertise spanning from frontend frameworks to backend systems, cloud infrastructure, and DevOps practices, Luke brings a comprehensive understanding of modern software development to every project. He is particularly interested in emerging technologies, open source contributions, and building scalable, maintainable solutions.
-
-When not coding, Luke enjoys exploring new technologies, contributing to open source projects, and sharing knowledge with the developer community through writing and speaking engagements.
+As the founder of Aquainnis Pty Ltd, Luke now focuses on developing sustainable technology solutions that balance environmental responsibility with business outcomes. His expertise spans executive advisory services, cloud architecture, identity management, and artificial intelligence, with a particular emphasis on helping organizations implement sustainability frameworks aligned with global ESG objectives. Luke holds multiple AWS certifications, a Master's degree in Information Technology from the University of Queensland, and has experience working with governments, Fortune 500 companies, and international organizations including the United Nations.
