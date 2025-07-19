@@ -54,12 +54,12 @@ time_format = "3:04 PM"
 
 # Enter contact details (optional). To hide a field, clear it to "".
 email = "luke@aquainnis.com"
-phone = "+61 438 151 095"
-address = "Brisbane, Australia"
+# phone = "+61 438 151 095"
+address = "South Brisbane, Australia"
 
 # Office hours: use `<br>` to insert a line break, or set to "" to remove office hours
-office_hours = """Monday 10:00 to 13:00<br>
-                  Wednesday 09:00 to 10:00"""
+office_hours = """Weekdays 09:00 to 17:00<br>
+                  Saturday 09:00 to 12:00"""
 
 # Enter an optional link for booking appointments (e.g. calendly.com).
 appointment_url = "https://calendly.com"
