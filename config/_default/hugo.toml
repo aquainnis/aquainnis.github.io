@@ -39,6 +39,13 @@ enableEmoji = true
 footnotereturnlinkcontents = "<sup>^</sup>"
 ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
+# Permalinks for different content types
+[permalinks]
+  news = "/news/:year/:month/:slug/"
+  projects = "/projects/:slug/"
+  results = "/results/:slug/"
+  services = "/services/:slug/"
+
 [services]
 # Enable comments by entering your Disqus shortname
 [services.disqus]
@@ -96,6 +103,8 @@ target = '$1'
   category = "categories"
   publication_type = "publication_types"
   author = "authors"
+  service_type = "service_types"
+  project_type = "project_types"
 
 # Caches
 [caches]
