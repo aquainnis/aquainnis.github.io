@@ -19,44 +19,43 @@
 
 ## 🌊 About Aquainnis
 
-Aquainnis is a sustainable technology company dedicated to developing innovative solutions for environmental challenges. Our website showcases our projects, research, publications, and team members working towards a more sustainable future.
+Aquainnis is a sustainable technology company founded by Luke Hargreaves, ex-Amazon thought leader and clean technology entrepreneur. With over 15 years of experience in cloud computing and sustainability solutions, we develop innovative technology that balances environmental responsibility with business outcomes.
 
 This repository contains the source code for our company website, built with Hugo and the Academia theme, deployed automatically to GitHub Pages.
 
 ## 🏗️ Technology Stack
 
-- **Static Site Generator**: [Hugo](https://gohugo.io/) v0.124.1
+- **Static Site Generator**: [Hugo](https://gohugo.io/) v0.147.9+ Extended
 - **Theme**: Academia Hugo (customized for corporate use)
 - **Deployment**: GitHub Pages with GitHub Actions
-- **Styling**: Bootstrap 4.3.1
-- **Contact Forms**: Formspree integration
-- **Analytics**: Google Analytics (configurable)
+- **Styling**: Bootstrap 4.3.1 with custom SASS
+- **Search**: Built-in Fuse.js search functionality
+- **Icons**: Font Awesome integration
 
 ## ✨ Features
 
 ### 🎯 Core Sections
 - **Home/Hero Section**: Company overview and mission
-- **About**: Company story and values
-- **Projects**: Sustainable technology initiatives
-- **Team**: Meet our experts and researchers
-- **Publications**: Research papers and articles
-- **Blog/Posts**: Latest news and insights
-- **Contact**: Get in touch with integrated contact form
+- **About**: Founder profile and company story
+- **Projects**: Sustainable technology initiatives and AI research
+- **Services**: Consulting and technical advisory services
+- **Case Studies**: Real-world outcomes and success stories
+- **News**: Latest updates and announcements
+- **Publications**: Research papers and technical articles
 
 ### 🔧 Technical Features
-- **Responsive Design**: Mobile-first approach
-- **SEO Optimized**: Meta tags, structured data
-- **Fast Loading**: Optimized images and minified assets
-- **Accessibility**: WCAG compliant
-- **Multi-language Support**: i18n ready
+- **Responsive Design**: Mobile-first approach with Bootstrap 4
+- **SEO Optimized**: Meta tags, structured data, and sitemap
+- **Fast Search**: Client-side search with Fuse.js
 - **Dark/Light Mode**: User preference toggle
-- **Search Functionality**: Built-in search capability
+- **Social Integration**: LinkedIn, GitHub, YouTube, and email links
+- **Custom Footer**: Clean, professional branding
+- **Accessibility**: WCAG compliant design
 
 ## 🚀 Getting Started
 
 ### Prerequisites
-- [Hugo Extended](https://gohugo.io/installation/) v0.124.1 or higher
-- [Node.js](https://nodejs.org/) v18.15.0 or higher
+- [Hugo Extended](https://gohugo.io/installation/) v0.147.9 or higher
 - [Git](https://git-scm.com/)
 
 ### Local Development
@@ -67,52 +66,59 @@ This repository contains the source code for our company website, built with Hug
    cd aquainnis.github.io
    ```
 
-2. **Install dependencies**
+2. **Start development server**
    ```bash
-   npm install
-   ```
-
-3. **Run project setup**
-   ```bash
-   npm run project-setup
-   ```
-
-4. **Start development server**
-   ```bash
-   npm run dev
+   hugo server --buildDrafts --buildFuture
    ```
    The site will be available at `http://localhost:1313`
 
-### Available Scripts
+### Quick Commands
 
 | Command | Description |
 |---------|-------------|
-| `npm run dev` | Start Hugo development server |
-| `npm run build` | Build production site |
-| `npm run test` | Run production build locally |
-| `npm run project-setup` | Initialize project configuration |
+| `hugo server` | Start Hugo development server |
+| `hugo --minify` | Build production site |
+| `hugo new publications/my-paper/index.md` | Create new publication |
+| `hugo new projects/my-project/index.md` | Create new project |
 
 ## 📁 Project Structure
 
 ```
 aquainnis.github.io/
 ├── .github/workflows/     # GitHub Actions CI/CD
-├── archetypes/           # Content templates
+├── archetypes/           # Content templates for new pages
+│   ├── default.md       # Default page template
+│   ├── publication/     # Publication template
+│   └── project/         # Project template
 ├── config/_default/      # Hugo configuration
-│   ├── hugo.toml        # Main Hugo config
-│   ├── params.toml      # Theme parameters
-│   ├── menus.toml       # Navigation menus
+│   ├── hugo.toml        # Main Hugo config & permalinks
+│   ├── params.toml      # Theme parameters & contact info
+│   ├── menus.toml       # Navigation structure
 │   └── languages.toml   # Multi-language settings
 ├── content/             # Website content
-│   ├── authors/         # Team member profiles
-│   ├── home/           # Homepage sections
-│   ├── post/           # Blog posts
-│   ├── project/        # Project showcases
-│   └── publication/    # Research publications
-├── data/               # Data files
-├── static/             # Static assets (images, files)
-├── themes/             # Hugo themes
-└── package.json        # Node.js dependencies
+│   ├── authors/         # Author profiles (Luke Hargreaves)
+│   │   └── luke-hargreaves/  # Founder profile
+│   ├── home/           # Homepage widget sections
+│   │   ├── about.md    # About widget
+│   │   ├── hero.md     # Hero section
+│   │   ├── projects.md # Projects showcase
+│   │   └── publications.md # Publications widget
+│   ├── news/           # News and updates
+│   │   └── 2025/       # Year-organized news
+│   ├── projects/       # Project showcases
+│   │   ├── artificial-intelligence/
+│   │   ├── deep-learning/
+│   │   └── skin-cancer-ai/
+│   ├── services/       # Service offerings
+│   │   └── consulting/ # Consulting services
+│   ├── case-studies/   # Success stories and outcomes
+│   └── publications/   # Research papers and articles
+├── data/               # Data files and configuration
+├── layouts/            # Custom template overrides
+│   └── partials/       # Custom footer (no "Powered by" text)
+├── static/             # Static assets
+│   └── img/           # Images and logos
+└── themes/             # Academia Hugo theme
 ```
 
 ## 🎨 Customization
@@ -134,20 +140,29 @@ The site uses the "forest" color theme appropriate for a sustainable technology 
 
 ### Content Management
 
-#### Adding Team Members
-1. Create folder: `content/authors/[username]/`
-2. Add `_index.md` with member details
-3. Include profile photo: `avatar.jpg`
+#### Adding Publications
+1. Create new publication: `hugo new publications/my-research-paper/index.md`
+2. Edit the generated file with your publication details
+3. Include featured image: `featured.jpg`
 
 #### Adding Projects
-1. Create folder: `content/project/[project-name]/`
-2. Add `index.md` with project details
+1. Create new project: `hugo new projects/my-project/index.md`
+2. Add project details and description
 3. Include featured image: `featured.jpg`
 
-#### Adding Blog Posts
-1. Create folder: `content/post/[post-name]/`
-2. Add `index.md` with post content
-3. Include featured image: `featured.jpg`
+#### Adding News/Updates
+1. Create folder: `content/news/2025/[post-name]/`
+2. Add `index.md` with news content
+3. Include featured image if needed
+
+### Search Configuration
+Search is enabled by default. To customize or disable:
+
+```toml
+# In config/_default/params.toml
+[search]
+  engine = 1  # 0: disabled, 1: built-in search, 2: Algolia
+```
 
 ## 🚀 Deployment
 
@@ -155,66 +170,62 @@ The site automatically deploys to GitHub Pages when changes are pushed to the `m
 
 ### GitHub Actions Workflow
 - **Trigger**: Push to `main` branch
-- **Process**: Install Hugo → Install dependencies → Build site → Deploy to GitHub Pages
+- **Process**: Install Hugo → Build site → Deploy to GitHub Pages
 - **URL**: https://aquainnis.github.io
 
 ### Manual Deployment
 ```bash
-npm run build
+hugo --minify
 # Upload the `public/` directory to your web server
 ```
 
-## 📞 Contact Configuration
+## � Search Functionality
 
-To enable the contact form:
+The site includes built-in search powered by Fuse.js:
 
-1. **Set up Formspree account** at [formspree.io](https://formspree.io)
-2. **Update contact widget**: Edit `content/home/contact.md`
-3. **Configure email settings**: Edit `config/_default/params.toml`
-
-See [Issue #2](https://github.com/aquainnis/aquainnis.github.io/issues/2) for detailed setup instructions.
+- **Access**: Click the search icon in navigation or visit `#search`
+- **Coverage**: Searches all content including publications, projects, and news
+- **Features**: Real-time search with fuzzy matching
+- **Performance**: Client-side search, no server requests needed
 
 ## 🔧 Configuration
 
 ### Key Configuration Files
 
-- **`config/_default/hugo.toml`**: Main Hugo configuration
-- **`config/_default/params.toml`**: Theme parameters and contact info
+- **`config/_default/hugo.toml`**: Main Hugo configuration and permalinks
+- **`config/_default/params.toml`**: Theme parameters, contact info, and social links
 - **`config/_default/menus.toml`**: Navigation structure
-- **`package.json`**: Build scripts and dependencies
+- **`content/home/`**: Homepage widget configuration
 
-### Environment Variables
+### Important Settings
 
-| Variable | Description | Required |
-|----------|-------------|----------|
-| `HUGO_ENV` | Hugo environment (production) | Yes |
-| `HUGO_VERSION` | Hugo version to use | Yes |
-| `NODE_VERSION` | Node.js version | Yes |
+```toml
+# Social sharing disabled
+sharing = false
 
-## 🤝 Contributing
+# Search enabled
+[search]
+  engine = 1
 
-We welcome contributions to improve our website! Please follow these guidelines:
-
-1. **Fork the repository**
-2. **Create a feature branch**: `git checkout -b feature/amazing-feature`
-3. **Commit changes**: `git commit -m 'Add amazing feature'`
-4. **Push to branch**: `git push origin feature/amazing-feature`
-5. **Open a Pull Request**
-
-### Content Guidelines
-- Use clear, professional language
-- Include alt text for all images
-- Follow existing naming conventions
-- Test locally before submitting
+# Content type mapping
+[cascade]
+  [[cascade]]
+    _target = {path = "/publications/**"}
+    type = "publication"
+```
 
 ## 📋 Roadmap
 
+- [x] ~~Implement search functionality~~ ✅ Built-in search with Fuse.js
+- [x] ~~Optimize project structure~~ ✅ Clean 5-category organization
+- [x] ~~Remove unnecessary build processes~~ ✅ Hugo-only workflow
+- [x] ~~Update founder profile with real content~~ ✅ Luke Hargreaves bio
+- [x] ~~Configure social links~~ ✅ LinkedIn, GitHub, YouTube integration
+- [ ] Add more case studies and project showcases
 - [ ] Implement contact form with Formspree
-- [ ] Add search functionality
-- [ ] Optimize images and performance
-- [ ] Add more project case studies
-- [ ] Implement newsletter signup
-- [ ] Add team member blog integration
+- [ ] Add newsletter signup functionality
+- [ ] Optimize images and performance further
+- [ ] Add more research publications
 
 ## 📄 License
 
@@ -232,8 +243,10 @@ As a sustainable technology company, we're committed to:
 
 - **Website**: [aquainnis.com](https://aquainnis.com)
 - **Email**: luke@aquainnis.com
-- **Phone**: +61 438 151 095
 - **Location**: Brisbane, Australia
+- **LinkedIn**: [Aquainnis Company](https://au.linkedin.com/company/aquainnis)
+- **GitHub**: [github.com/aquainnis](https://github.com/aquainnis)
+- **YouTube**: [@aquainnis](https://youtube.com/@aquainnis)
 
 ---
 
