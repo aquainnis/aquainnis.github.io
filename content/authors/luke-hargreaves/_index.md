@@ -3,7 +3,7 @@
 name: Luke Hargreaves
 
 # Profile image (add your photo to static/img/ folder)
-avatar_image: "user-2.jpg"  # Replace with your actual photo filename
+avatar_image: "IMG_0409.png"
 
 # Username (this should match the folder name)
 authors:
