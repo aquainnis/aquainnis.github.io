@@ -43,7 +43,7 @@ interests:
 
 education:
   courses:
-  - course: Bachelor of Computer Science
+  - course: Master of Information Technology
     institution: University of Queensland
     year: 2013
   - course: Certified AWS Solutions Architect
