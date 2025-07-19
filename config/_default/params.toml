@@ -70,6 +70,7 @@ contact_links = [
   {icon = "linkedin", icon_pack = "fab", name = "LinkedIn", link = "https://au.linkedin.com/company/aquainnis"},
   {icon = "github", icon_pack = "fab", name = "GitHub", link = "https://github.com/aquainnis"},
 #  {icon = "twitter", icon_pack = "fab", name = "Twitter", link = "https://twitter.com/lukehargreaves"},
+  {icon = "youtube", icon_pack = "fab", name = "YouTube", link = "https://youtube.com/@aquainnis"},
   {icon = "envelope", icon_pack = "fas", name = "Email", link = "mailto:luke@aquainnis.com"},
   {icon = "globe", icon_pack = "fas", name = "Website", link = "https://aquainnis.com"},
   ]
@@ -126,7 +127,7 @@ section_pager = false
 docs_section_pager = true  # Display pager in Docs layout (e.g. tutorials)?
 
 # Enable in-built social sharing buttons? (true/false)
-sharing = true
+sharing = false
 
 # Configuration of publication pages.
 [publications]
