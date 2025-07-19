@@ -14,9 +14,14 @@
   weight = 30
 
 [[main]]
-  name = "Results"
-  url = "/results/"
+  name = "Case Studies"
+  url = "/case-studies/"
   weight = 40
+
+[[main]]
+  name = "Publications"
+  url = "/publications/"
+  weight = 45
 
 [[main]]
   name = "News"

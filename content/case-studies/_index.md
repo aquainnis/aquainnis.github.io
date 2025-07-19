@@ -1,7 +1,7 @@
 ---
-title: Results & Case Studies
+title: Case Studies
 subtitle: Real-world outcomes and success stories
-summary: Demonstrable results from our work, including case studies, client successes, and research outcomes.
+summary: Demonstrable results from our work, including detailed case studies, client successes, and research outcomes.
 
 # View options
 #   1 = List

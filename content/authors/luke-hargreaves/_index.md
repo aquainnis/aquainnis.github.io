@@ -26,7 +26,7 @@ organizations:
   url: "https://aquainnis.com"
 
 # Short bio (displayed in user profile at end of posts)
-bio: Ex-Amazon executive and clean technology entrepreneur with 15+ years of experience in cloud architecture, sustainability solutions, and global business development. Proven track record of scaling teams from startup to enterprise level.
+bio: Ex-Amazon thought leader and clean technology entrepreneur with 15+ years of experience in cloud architecture, sustainability solutions, and global business development. Proven track record of scaling teams from startup to enterprise level.
 
 # Should the user's education and interests be displayed?
 display_education: true
@@ -45,10 +45,13 @@ education:
   courses:
   - course: Master of Information Technology
     institution: University of Queensland
-    year: 2013
-  - course: Certified AWS Solutions Architect
+    # year: 2013
+  - course: Certified AWS Professional (Multiple Certs)
     institution: Amazon Web Services
-    year: 2022
+    # year: 2022
+  - course: Bachelor of Arts
+    institution: University of Queensland
+    # year: 2022
 
 # Social/academia Networking
 # For available icons, see: https://sourcethemes.com/academic/docs/widgets/#icons
@@ -58,15 +61,15 @@ social:
 - icon: envelope
   icon_pack: fas
   link: 'mailto:luke@aquainnis.com'
-- icon: twitter
-  icon_pack: fab
-  link: https://twitter.com/lukehargreaves
+# - icon: twitter
+#   icon_pack: fab
+#   link: https://twitter.com/lukehargreaves
 - icon: linkedin
   icon_pack: fab
   link: https://linkedin.com/in/lukehargreaves
 - icon: github
   icon_pack: fab
-  link: https://github.com/lukehargreaves
+  link: https://github.com/lukeharg
 - icon: globe
   icon_pack: fas
   link: https://aquainnis.com

@@ -8,7 +8,7 @@ This directory contains backup copies of content from the original Academia Hugo
 Contains original theme content directories that were moved out of the main content folder:
 
 - **`post/`** - Original blog post structure (replaced by new category-based organization)
-- **`publication/`** - Academic publications section
+- **`publication/`** - Academic publications section (**RESTORED** as `content/publications/`)
 - **`talk/`** - Academic talks and presentations
 - **`slides/`** - Presentation slides
 - **`courses/`** - Course content and materials
@@ -22,11 +22,12 @@ These directories are preserved here for reference in case you need to:
 
 ## New Structure
 
-The main content folder now uses a clean 4-category organization:
+The main content folder now uses a clean 5-category organization:
 - `projects/` - Project showcases
-- `results/` - Case studies and outcomes
+- `case-studies/` - Case studies and outcomes
 - `services/` - Service offerings
 - `news/` - News and updates (date-organized)
+- `publications/` - Academic publications and research papers
 
 ## Date Created
 July 19, 2025

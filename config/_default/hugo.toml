@@ -43,13 +43,13 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
 [permalinks]
   news = "/news/:year/:month/:slug/"
   projects = "/projects/:slug/"
-  results = "/results/:slug/"
+  case-studies = "/case-studies/:slug/"
   services = "/services/:slug/"
 
 [services]
 # Enable comments by entering your Disqus shortname
 [services.disqus]
-Shortname = "themefisher-template" # we use disqus to show comments in blog posts . To install disqus please follow this tutorial https://portfolio.peter-baumgartner.net/2017/09/10/how-to-install-disqus-on-hugo/
+# Shortname = "themefisher-template" # DISABLED - we use disqus to show comments in blog posts . To install disqus please follow this tutorial https://portfolio.peter-baumgartner.net/2017/09/10/how-to-install-disqus-on-hugo/
 
 # Build
 [build]
@@ -105,6 +105,11 @@ target = '$1'
   author = "authors"
   service_type = "service_types"
   project_type = "project_types"
+
+# Section configuration - maps folder names to content types
+[[cascade]]
+  _target.path = "/publications/**"
+  type = "publication"
 
 # Caches
 [caches]

@@ -67,11 +67,11 @@ appointment_url = "https://calendly.com"
 # Contact links
 #   Set to `[]` to disable, or comment out unwanted lines with a hash `#`.
 contact_links = [
-  {icon = "twitter", icon_pack = "fab", name = "DM Me", link = "https://twitter.com/Twitter"},
-  {icon = "skype", icon_pack = "fab", name = "Skype Me", link = "skype:echo123?call"},
-  {icon = "keybase", icon_pack = "fab", name = "Chat on Keybase", link = "https://keybase.io/"},
-  {icon = "comments", icon_pack = "fas", name = "Discuss on Forum", link = "https://discourse.gohugo.io"},
-  # {icon = "telegram", icon_pack = "fab", name = "Telegram Me", link = "https://telegram.me/@Telegram"},
+  {icon = "linkedin", icon_pack = "fab", name = "LinkedIn", link = "https://au.linkedin.com/company/aquainnis"},
+  {icon = "github", icon_pack = "fab", name = "GitHub", link = "https://github.com/aquainnis"},
+#  {icon = "twitter", icon_pack = "fab", name = "Twitter", link = "https://twitter.com/lukehargreaves"},
+  {icon = "envelope", icon_pack = "fas", name = "Email", link = "mailto:luke@aquainnis.com"},
+  {icon = "globe", icon_pack = "fas", name = "Website", link = "https://aquainnis.com"},
   ]
 
 # Display a map.
@@ -119,7 +119,7 @@ menu_align_right = true
 reading_time = true
 
 # Display comment count (if commenting enabled in config.toml)? (true/false)
-comment_count = true
+comment_count = false
 
 # Display next/previous section pager? (true/false)
 section_pager = false
