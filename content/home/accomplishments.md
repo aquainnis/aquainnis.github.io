@@ -5,8 +5,8 @@ headless = true  # This file represents a page section.
 active = true  # Activate this widget? true/false
 weight = 50  # Order that this section will appear.
 
-title = "Accomplish&shy;ments"
-subtitle = "PREVIOUS ASSOCIATIONS THAT HELPED TO GATHER EXPERIENCE"
+title = "Customers & Partners"
+subtitle = "WHO WE HAVE WORKED WITH TO GET TO WHERE WE ARE"
 
 # Date format
 #   Refer to https://sourcethemes.com/academic/docs/customization/#date-format
@@ -19,43 +19,45 @@ date_format = "Jan 2006"
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
 
 [[item]]
-  organization = "Coursera"
-  organization_url = "https://www.coursera.org"
-  title = "Neural Networks and Deep Learning"
-  url = ""
-  certificate_url = "https://www.coursera.org"
-  date_start = "2018-10-01"
+  organization = "Partner"
+  organization_url = "https://aws.amazon.com"
+  title = "Amazon Web Services"
+  url = "https://aws.amazon.com"
+  certificate_url = ""
+  date_start = "2024-04-05"
   date_end = ""
-  description = "Formulated informed blockchain models, hypotheses, and use cases."
+  description = "As an official partner of AWS, we work closely with both them and you to achieve your business goals."
 
 [[item]]
-  organization = "edX"
-  organization_url = "https://www.edx.org"
-  title = "Blockchain Fundamentals"
-  url = "https://www.edx.org/professional-certificate/uc-berkeleyx-blockchain-fundamentals"
-  certificate_url = "https://www.edx.org"
-  date_start = "2018-03-01"
+  organization = "Customer"
+  organization_url = "https://www.materresearch.org.au"
+  title = "Mater Research"
+  url = "https://www.materresearch.org.au"
+  certificate_url = ""
+  date_start = "2024-01-15"
+  date_end = "2024-02-22"
+  description = "Working closely with the University of Queensland, Aquainnis built a global site for academics to collaborate on critical bone research."
+
+[[item]]
+  organization = "Customer"
+  organization_url = "https://aws.amazon.com"
+  title = "Customer 2"
+  url = "/case-studies/"
+  certificate_url = ""
+  date_start = "2022-09-17"
   date_end = ""
-  description = "Formulated informed blockchain models, hypotheses, and use cases."
-  
+  description = "Description of how we worked with them to build or augment their current business systems."
+
 [[item]]
-  organization = "DataCamp"
-  organization_url = "https://www.datacamp.com"
-  title = "Object-Oriented Programming in R: S3 and R6 Course"
-  url = ""
-  certificate_url = "https://www.datacamp.com"
-  date_start = "2017-07-01"
-  date_end = "2017-12-21"
-  description = ""
-  
-[[item]]
-  organization = "RDX"
-  organization_url = "https://www.rdx.com"
-  title = "Object-Oriented Programming in R: S3 and R6 Course"
-  url = ""
-  certificate_url = "https://www.datacamp.com"
-  date_start = "2017-07-01"
-  date_end = "2017-12-21"
-  description = ""
+  organization = "Customer"
+  organization_url = "https://aws.amazon.com"
+  title = "Customer 3"
+  url = "/case-studies/"
+  certificate_url = ""
+  date_start = "2022-09-17"
+  date_end = ""
+  description = "Description of how we worked with them to build or augment their current business systems."
+
+
 
 +++
