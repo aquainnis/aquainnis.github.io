@@ -253,6 +253,20 @@ $border-radius-lg: 0.5rem;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px 0px;
 }
 
+// Hero widget mobile responsiveness
+// On mobile screens, show image above text
+@media (max-width: 767.98px) {
+  .hero-media {
+    order: 1; // Image appears first on mobile
+    margin-bottom: $spacer-md; // Add some space between image and text
+  }
+  
+  .hero-media + div,
+  .col-md-6.order-md-1 {
+    order: 2; // Text appears second on mobile
+  }
+}
+
 .section-heading {
   color: $aquainnis-primary;
   border-bottom: 2px solid $aquainnis-accent;
