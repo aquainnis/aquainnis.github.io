@@ -5,6 +5,7 @@ tags:
 - Demo
 - Deep Learning
 date: "2016-04-27T00:00:00Z"
+type: "project"
 
 # Optional external URL for project (replaces project detail page).
 external_link: 

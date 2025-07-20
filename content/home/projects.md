@@ -3,7 +3,7 @@
 widget = "portfolio"  # See https://sourcethemes.com/academic/docs/page-builder/
 headless = true  # This file represents a page section.
 active = true  # Activate this widget? true/false
-weight = 65  # Order that this section will appear.
+weight = 40  # Order that this section will appear.
 
 title = "Projects"
 subtitle = "ALL THINGS ARE DIFFICULT BEFORE THEY ARE EASY"
@@ -11,6 +11,9 @@ subtitle = "ALL THINGS ARE DIFFICULT BEFORE THEY ARE EASY"
 [content]
   # Page type to display. E.g. project.
   page_type = "project"
+  
+  # Number of items to display (optional). Set to 0 to show all.
+  # count = 3
   
   # Filter toolbar (optional).
   # Add or remove as many filters (`[[content.filter_button]]` instances) as you like.
