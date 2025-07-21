@@ -167,3 +167,9 @@ sharing = false
     api_key = ""
     index_name = ""
     show_logo = false
+
+# Formspree configuration
+[formspree]
+  form_id = "xgvzongn"
+  # or use the full endpoint URL
+  endpoint = "https://formspree.io/f/xgvzongn"
