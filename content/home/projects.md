@@ -13,7 +13,7 @@ subtitle = "ALL THINGS ARE DIFFICULT BEFORE THEY ARE EASY"
   page_type = "project"
   
   # Number of items to display (optional). Set to 0 to show all.
-  # count = 3
+  count = 3
   
   # Filter toolbar (optional).
   # Add or remove as many filters (`[[content.filter_button]]` instances) as you like.
