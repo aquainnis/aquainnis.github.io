@@ -95,14 +95,6 @@
       </li>
       {{ end }}
 
-      {{/* Display contact links from params.toml */}}
-      {{ range site.Params.contact_links }}
-      <li>
-        <i class="fa-li {{ .icon_pack }} fa-{{ .icon }} mt-2" aria-hidden="true"></i>
-        <a href="{{ .link }}" target="_blank" rel="noopener">{{ .name }}</a>
-      </li>
-      {{ end }}
-
     </ul>
   </div>
   <div class="col-12">
