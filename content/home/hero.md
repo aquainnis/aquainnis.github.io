@@ -34,7 +34,7 @@ hero_media = "lightbulb.jpg"
 #   Display link(s) by specifying a URL and label below. Icon is optional for `[cta]`.
 #   Remove a link/note by deleting a cta/note block.
 [btn]
-  url = "#projects"
+  url = "#about"
   label = "About"
   
 [btn_alt]

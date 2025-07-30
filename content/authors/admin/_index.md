@@ -1,25 +1,22 @@
 ---
 # Display name
-name: Michael Vahn
-avatar_image: "user-full.png"
+name: About Aquainnis
+avatar_image: "aquainnis-logo-500x500-trans.png"
+
 # Username (this should match the folder name)
 authors:
 - admin
+
 # resume download button
-btn:
-- url : "https://sourcethemes.com/academic/docs/install/"
-  label : "Download Resume"
+# btn:
+# - url : "https://sourcethemes.com/academic/docs/install/"
+#   label : "Download Resume"
 
 # Is this the primary user of the site?
 superuser: false
 
 # Role/position
-role: Professor of Artificial Intelligence
-
-# Organizations/Affiliations
-organizations:
-- name: Stanford University
-  url: ""
+role: Pioneering intelligent, sustainable technology solutions
 
 # Short bio (displayed in user profile at end of posts)
 bio: My research interests include distributed robotics, mobile computing and programmable matter.
@@ -52,15 +49,15 @@ social:
 - icon: envelope
   icon_pack: fas
   link: '#contact'  # For a direct email link, use "mailto:test@example.org".
-- icon: twitter
+- icon: linkedin
   icon_pack: fab
-  link: https://twitter.com/GeorgeCushen
-- icon: google-scholar
-  icon_pack: ai
-  link: https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ
+  link: https://au.linkedin.com/company/aquainnis
+- icon: youtube
+  icon_pack: fab
+  link: https://youtube.com/@aquainnis
 - icon: github
   icon_pack: fab
-  link: https://github.com/gcushen
+  link: https://github.com/aquainnis
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.  
 # - icon: cv
@@ -77,7 +74,8 @@ user_groups:
 - Former Team
 ---
 
-Nelson Bighetti is a professor of artificial intelligence at the Stanford AI Lab. His research interests include distributed robotics, mobile computing and programmable matter. He leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
+Aquainnis is a sustainable technology company that builds intelligent software solutions and provides expert consulting services to help businesses optimize their operations through cutting-edge technology.
 
+We develop AI-powered platforms, cloud-native applications, and enterprise systems that enable organizations to automate processes, gain data-driven insights, and scale efficiently.
 
-It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum. The point of using Lorem Ipsum. distracted by the readable content of a page.
+Our team specializes in artificial intelligence, sustainable computing, cloud architecture, and identity management, delivering both innovative products and strategic guidance to drive digital transformation across industries.
