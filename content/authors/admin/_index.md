@@ -74,8 +74,6 @@ user_groups:
 - Former Team
 ---
 
-Aquainnis is a sustainable technology company that builds intelligent software solutions and provides expert consulting services to help businesses optimize their operations through cutting-edge technology.
+Aquainnis is a sustainability-focused technology company that helps businesses unlock the full potential of modern software. We design and build intelligent, AI-driven platforms, cloud-native applications, and enterprise systems that streamline operations, uncover valuable insights, and support scalable growth.
 
-We develop AI-powered platforms, cloud-native applications, and enterprise systems that enable organizations to automate processes, gain data-driven insights, and scale efficiently.
-
-Our team specializes in artificial intelligence, sustainable computing, cloud architecture, and identity management, delivering both innovative products and strategic guidance to drive digital transformation across industries.
+Blending technical expertise with strategic thinking, our team delivers both innovative solutions and hands-on consulting across artificial intelligence, sustainable computing, cloud architecture, and identity management. We partner with organisations to drive smarter, more efficient digital transformation—built for the future.
