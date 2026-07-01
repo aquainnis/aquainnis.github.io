@@ -3613,7 +3613,7 @@ footer .row {
 .s-works .intro-wrap .subhead { color: var(--aq-teal); }
 footer h4 { color: var(--aq-teal); }
 
-/* Contact email / inline links on dark contact section */
-.contact-info a { color: var(--aq-teal); }
+/* Contact email / inline links match surrounding cinfo text */
+.contact-info a { color: inherit; }
 .contact-info a:hover,
 .contact-info a:focus { color: #ffffff; }
