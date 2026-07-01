@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<!--[if lt IE 9 ]><html class="no-js oldie" lang="en-AU"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en-AU"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en-AU">
+<!--<![endif]-->
+
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>AWS Cost Optimisation Brisbane | Cut Your AWS Bill 20&ndash;40% | Aquainnis</title>
+    <meta name="description" content="Cut your AWS bill by 20-40%. Free audit by a former AWS Solutions Architect, then pay only a share of what's actually saved. Brisbane-based, servicing Australia-wide and remotely.">
+    <meta name="author" content="Luke Hargreaves">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://aquainnis.com/aws-cost-optimisation.html">
+
+    <!-- local / geo targeting -->
+    <meta name="geo.region" content="AU-QLD">
+    <meta name="geo.placename" content="Brisbane, Queensland">
+    <meta name="geo.position" content="-27.4809;153.0176">
+    <meta name="ICBM" content="-27.4809, 153.0176">
+
+    <!-- mobile specific metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#379543">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Aquainnis">
+    <meta property="og:title" content="AWS Cost Optimisation Brisbane | Cut Your AWS Bill 20-40% | Aquainnis">
+    <meta property="og:description" content="Free AWS audit by a former AWS Solutions Architect. Pay only a share of what's actually saved. No savings, no fee.">
+    <meta property="og:url" content="https://aquainnis.com/aws-cost-optimisation.html">
+    <meta property="og:image" content="https://aquainnis.com/images/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="en_AU">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AWS Cost Optimisation Brisbane | Cut Your AWS Bill 20-40% | Aquainnis">
+    <meta name="twitter:description" content="Free AWS audit by a former AWS Solutions Architect. Pay only a share of what's actually saved. No savings, no fee.">
+    <meta name="twitter:image" content="https://aquainnis.com/images/og-image.jpg">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- script -->
+    <script src="js/modernizr.js"></script>
+    <script src="js/pace.min.js"></script>
+
+    <!-- favicons -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="images/aquainnis-logo-500x500-trans.png">
+
+    <!-- service-page styles (scoped)
+    ================================================== -->
+    <style>
+        /* Hero */
+        .svc-hero {
+            position: relative;
+            padding: 21rem 0 12rem;
+            text-align: center;
+            color: #fff;
+            background: radial-gradient(120% 120% at 50% 0%, #18241f 0%, #0e1114 62%);
+            overflow: hidden;
+        }
+        .svc-hero .subhead { color: var(--aq-teal); margin-bottom: 1.8rem; }
+        .svc-hero h1 {
+            color: #fff;
+            font-size: 6.4rem;
+            line-height: 1.1;
+            letter-spacing: -0.1rem;
+            margin: 0 auto 2.4rem;
+            max-width: 14ch;
+        }
+        .svc-hero h1 .accent { color: var(--aq-green); }
+        .svc-lead {
+            font-family: "lora-regular", serif;
+            font-size: 2.2rem;
+            line-height: 1.7;
+            color: rgba(255,255,255,0.72);
+            max-width: 62rem;
+            margin: 0 auto 4rem;
+        }
+        .svc-hero__buttons .btn { margin: 0 .6rem 1.2rem; border-color: #fff; color: #fff; }
+        .svc-hero__buttons .btn:hover,
+        .svc-hero__buttons .btn:focus { background: #fff !important; border-color: #fff; color: #000; }
+        .svc-hero__meta {
+            margin-top: 1.8rem;
+            font-size: 1.4rem;
+            letter-spacing: .1rem;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.4);
+        }
+
+        /* generic section rhythm */
+        .svc-section { padding: 12rem 0; background: #fff; }
+        .svc-section--tint { background: #f6f8f7; }
+        .svc-section--dark { background: #111417; color: rgba(255,255,255,0.75); }
+        .svc-section--dark .display-2 { color: #fff; }
+        .svc-lead-p { font-size: 2rem; line-height: 1.8; max-width: 74rem; margin: 0 auto; color: #3c444c; }
+        .svc-center { text-align: center; }
+
+        /* numbered steps */
+        .svc-steps { margin-top: 5rem; }
+        .svc-step { position: relative; padding: 0 2.4rem; }
+        .svc-step__num {
+            display: inline-flex; align-items: center; justify-content: center;
+            width: 6rem; height: 6rem; border-radius: 50%;
+            background: var(--aq-green); color: #fff;
+            font-family: "montserrat-bold", sans-serif; font-size: 2.4rem;
+            margin-bottom: 2.4rem;
+        }
+        .svc-step h3 { font-size: 2.2rem; margin-bottom: 1.2rem; color: #fff; }
+        .svc-step p { font-size: 1.6rem; line-height: 1.75; color: rgba(255,255,255,0.6); }
+
+        /* audit checklist */
+        .svc-checklist { list-style: none; margin: 4rem 0 0; padding: 0;
+            display: grid; grid-template-columns: 1fr 1fr; gap: 2.2rem 4rem; }
+        .svc-checklist li {
+            position: relative; padding-left: 4.4rem;
+            font-size: 1.75rem; line-height: 1.5; color: #101418;
+        }
+        .svc-checklist li i {
+            position: absolute; left: 0; top: -0.2rem;
+            width: 3rem; height: 3rem; border-radius: 50%;
+            background: rgba(55,149,67,0.12); color: var(--aq-green);
+            display: inline-flex; align-items: center; justify-content: center;
+            font-size: 1.4rem;
+        }
+
+        /* why cards */
+        .svc-why .col-block { padding: 0 2rem; }
+        .svc-why h3 { font-size: 2rem; margin: 1.6rem 0 1rem; color: #fff; }
+        .svc-why p { font-size: 1.6rem; line-height: 1.7; color: rgba(255,255,255,0.6); }
+        .svc-why__icon { font-size: 3.4rem; color: var(--aq-teal); }
+
+        /* offer banner */
+        .svc-banner { background: var(--aq-green); padding: 8rem 0; text-align: center; }
+        .svc-banner p {
+            color: #fff; font-family: "montserrat-bold", sans-serif;
+            font-size: 3rem; line-height: 1.4; max-width: 90rem; margin: 0 auto;
+        }
+        .svc-banner .highlight { color: #0c2b13; }
+
+        /* final CTA */
+        .svc-cta { padding: 12rem 0; text-align: center; background: #111417; }
+        .svc-cta .display-2 { margin-bottom: 2rem; color: #fff; }
+        .svc-cta__note { font-size: 1.6rem; color: rgba(255,255,255,0.5); margin-top: 2.4rem; }
+
+        @media only screen and (max-width: 768px) {
+            .svc-hero h1 { font-size: 4.4rem; }
+            .svc-checklist { grid-template-columns: 1fr; }
+            .svc-step { margin-bottom: 4rem; }
+            .svc-banner p { font-size: 2.2rem; }
+        }
+    </style>
+
+    <!-- structured data: this service
+    ================================================== -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "AWS Cost Optimisation",
+      "serviceType": "Cloud cost optimisation (FinOps)",
+      "url": "https://aquainnis.com/aws-cost-optimisation.html",
+      "description": "Free AWS audit by a former AWS Solutions Architect, then a share-of-savings engagement to capture 20-40% cost reductions. No savings, no fee.",
+      "provider": {
+        "@type": "ProfessionalService",
+        "name": "Aquainnis",
+        "url": "https://aquainnis.com/",
+        "email": "info@aquainnis.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "South Brisbane",
+          "addressRegion": "QLD",
+          "addressCountry": "AU"
+        }
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Brisbane" },
+        { "@type": "State", "name": "Queensland" },
+        { "@type": "Country", "name": "Australia" }
+      ]
+    }
+    </script>
+
+</head>
+
+<body id="top">
+
+    <!-- header
+    ================================================== -->
+    <header class="s-header">
+
+        <div class="header-logo">
+            <a class="site-logo" href="index.html">
+                <img src="images/aquainnis-logo-500x500-trans.png" alt="Aquainnis home">
+            </a>
+        </div>
+
+        <nav class="header-nav">
+
+            <a href="#0" class="header-nav__close" title="close"><span>Close</span></a>
+
+            <div class="header-nav__content">
+                <h3>Navigation</h3>
+
+                <ul class="header-nav__list">
+                    <li><a href="index.html#home" title="home">Home</a></li>
+                    <li><a href="index.html#about" title="about">About</a></li>
+                    <li><a href="index.html#services" title="services">Services</a></li>
+                    <li><a href="index.html#works" title="works">Works</a></li>
+                    <li><a href="index.html#clients" title="clients">Clients</a></li>
+                    <li><a href="index.html#contact" title="contact">Contact</a></li>
+                </ul>
+
+                <p>Aquainnis was founded in 2021 by former Amazon Web Services global advisor <a href='https://www.linkedin.com/in/lukehargreaves/'>Luke Hargreaves</a>. Drawing on over 20 years in cloud, identity, and sustainable architecture, including executive engagement across the globe.</p>
+
+                <ul class="header-nav__social">
+                    <li>
+                        <a href="https://www.linkedin.com/company/aquainnis/" aria-label="LinkedIn"><i class="fa fa-linkedin"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/@aquainnis" aria-label="YouTube"><i class="fa fa-youtube"></i></a>
+                    </li>
+                </ul>
+
+            </div> <!-- end header-nav__content -->
+
+        </nav>  <!-- end header-nav -->
+
+        <a class="header-menu-toggle" href="#0">
+            <span class="header-menu-text">Menu</span>
+            <span class="header-menu-icon"></span>
+        </a>
+
+    </header> <!-- end s-header -->
+
+
+    <!-- hero
+    ================================================== -->
+    <section class="svc-hero">
+        <div class="row">
+            <div class="col-full">
+                <h3 class="subhead">AWS Cost Optimisation</h3>
+                <h1>Cut your AWS bill by <span class="accent">20&ndash;40%</span>.</h1>
+                <p class="svc-lead">
+                    Run by a former AWS Solutions Architect. I&rsquo;ll run a free audit, show you
+                    exactly where the money is leaking &mdash; and you only pay a share of what&rsquo;s actually saved.
+                </p>
+                <div class="svc-hero__buttons">
+                    <a href="mailto:info@aquainnis.com?subject=Free%20AWS%20Cost%20Audit" class="btn btn--stroke">Book a Free Audit</a>
+                    <a href="#audit" class="btn btn--stroke smoothscroll">What&rsquo;s Included</a>
+                </div>
+                <p class="svc-hero__meta">No cost up front &middot; No savings, no fee</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- the problem
+    ================================================== -->
+    <section class="svc-section">
+        <div class="row section-header has-bottom-sep svc-center" data-aos="fade-up">
+            <div class="col-full">
+                <h3 class="subhead">The Problem</h3>
+                <h1 class="display-2">Most companies on AWS are overspending &mdash; without realising it.</h1>
+            </div>
+        </div>
+        <div class="row" data-aos="fade-up">
+            <div class="col-full svc-center">
+                <p class="svc-lead-p">
+                    Idle resources, oversized instances, and Savings Plans that no longer match usage quietly
+                    stack up every month. It rarely shows up on anyone&rsquo;s radar &mdash; because nobody owns it.
+                    I&rsquo;m Luke, founder of Aquainnis. I spent seven years as a Solutions Architect at AWS,
+                    and I now help companies find and cut that waste.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- how it works
+    ================================================== -->
+    <section class="svc-section svc-section--dark">
+        <div class="row section-header has-bottom-sep light-sep svc-center" data-aos="fade-up">
+            <div class="col-full">
+                <h3 class="subhead">How It Works</h3>
+                <h1 class="display-2">A simple, risk-free path to a smaller bill</h1>
+            </div>
+        </div>
+        <div class="row svc-steps block-1-3 block-tab-full svc-center">
+            <div class="col-block svc-step" data-aos="fade-up">
+                <div class="svc-step__num">1</div>
+                <h3>Free Audit</h3>
+                <p>I run a free audit of your AWS environment and show you exactly where the money&rsquo;s leaking &mdash; with a dollar figure attached. Turnaround is usually a week or two.</p>
+            </div>
+            <div class="col-block svc-step" data-aos="fade-up">
+                <div class="svc-step__num">2</div>
+                <h3>Capture the Savings</h3>
+                <p>If you want me to act on it, I go and capture those savings &mdash; right-sizing, coverage gaps, cleanup and tiering &mdash; with no disruption to what&rsquo;s running.</p>
+            </div>
+            <div class="col-block svc-step" data-aos="fade-up">
+                <div class="svc-step__num">3</div>
+                <h3>Share of Savings</h3>
+                <p>I take a slice of what I actually save you. Nothing up front, and I only win if you do &mdash; so our incentives are perfectly aligned.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- what the audit covers
+    ================================================== -->
+    <section id="audit" class="svc-section svc-section--tint">
+        <div class="row section-header has-bottom-sep" data-aos="fade-up">
+            <div class="col-full">
+                <h3 class="subhead">The Free Audit</h3>
+                <h1 class="display-2">What we look at</h1>
+            </div>
+        </div>
+        <div class="row" data-aos="fade-up">
+            <div class="col-full">
+                <ul class="svc-checklist">
+                    <li><i class="icon-yes"></i><span>Idle and orphaned resources you&rsquo;re still paying for</span></li>
+                    <li><i class="icon-yes"></i><span>Right-sizing of oversized instances</span></li>
+                    <li><i class="icon-yes"></i><span>Reserved Instance / Savings Plan coverage gaps</span></li>
+                    <li><i class="icon-yes"></i><span>Storage tiering and data-transfer waste</span></li>
+                    <li><i class="icon-yes"></i><span>Untagged and unallocated spend</span></li>
+                    <li><i class="icon-yes"></i><span>A prioritised action list with projected dollar savings</span></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- why aquainnis
+    ================================================== -->
+    <section class="svc-section svc-section--dark svc-why">
+        <div class="row section-header has-bottom-sep light-sep svc-center" data-aos="fade-up">
+            <div class="col-full">
+                <h3 class="subhead">Why Aquainnis</h3>
+                <h1 class="display-2">Senior, independent, risk-free</h1>
+            </div>
+        </div>
+        <div class="row block-1-3 block-tab-full svc-center">
+            <div class="col-block" data-aos="fade-up">
+                <div class="svc-why__icon"><i class="icon-badge"></i></div>
+                <h3>Ex-AWS Architect</h3>
+                <p>Led by a former AWS Solutions Architect with seven years inside AWS &mdash; not a reseller, not a junior.</p>
+            </div>
+            <div class="col-block" data-aos="fade-up">
+                <div class="svc-why__icon"><i class="icon-shield"></i></div>
+                <h3>Risk-Free</h3>
+                <p>The audit is free, and implementation is paid only from realised savings. No savings, no fee.</p>
+            </div>
+            <div class="col-block" data-aos="fade-up">
+                <div class="svc-why__icon"><i class="icon-user"></i></div>
+                <h3>Direct &amp; Senior</h3>
+                <p>You deal directly with the person doing the work &mdash; no account managers, no hand-offs.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- the offer, in one line
+    ================================================== -->
+    <section class="svc-banner" data-aos="fade-up">
+        <div class="row">
+            <div class="col-full">
+                <p>
+                    Free AWS audit &rarr; 20&ndash;40% of savings identified &rarr;
+                    <span class="highlight">you keep ~70&ndash;80%</span>, I take the rest for 12 months.
+                    No savings, no fee.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- final CTA
+    ================================================== -->
+    <section class="svc-cta">
+        <div class="row" data-aos="fade-up">
+            <div class="col-full">
+                <h3 class="subhead">Let&rsquo;s Talk</h3>
+                <h1 class="display-2">Worth a 20-minute call to see the numbers?</h1>
+                <div class="svc-hero__buttons">
+                    <a href="mailto:info@aquainnis.com?subject=Free%20AWS%20Cost%20Audit" class="btn btn--stroke">Book a Free Audit</a>
+                    <a href="index.html#contact" class="btn btn--stroke">Contact Us</a>
+                </div>
+                <p class="svc-cta__note">Brisbane-based &middot; servicing Australia-wide and remotely &middot; initial audit in a week or two.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- footer
+    ================================================== -->
+    <footer>
+
+        <div class="row footer-main">
+
+            <div class="col-six tab-full left footer-desc">
+
+                <div class="footer-logo"></div>
+Aquainnis was founded in 2021 by former Amazon Web Services global advisor Luke Hargreaves. Drawing on over 20 years in cloud, identity, and sustainable architecture, including executive engagement across the Asia-Pacific and beyond, Luke created Aquainnis to deliver clear, high-quality technology outcomes without unnecessary complexity, pressure, or cost.
+            </div>
+
+            <div class="col-six tab-full right footer-subscribe">
+
+                <h4>Get Notified</h4>
+                <p>If you would like to keep up to date with Aquainnis news, projects and updates, please subscribe to our newsletter using the form below.</p>
+
+                <div class="subscribe-form">
+                    <form id="mc-form" class="group" novalidate="true">
+                        <input type="email" value="" name="EMAIL" class="email" id="mc-email" placeholder="Email Address" required="">
+                        <input type="submit" name="subscribe" value="Subscribe">
+                        <label for="mc-email" class="subscribe-message"></label>
+                    </form>
+                </div>
+
+            </div>
+
+        </div> <!-- end footer-main -->
+
+        <div class="row footer-bottom">
+
+            <div class="col-twelve">
+                <div class="copyright">
+                    <span>© Aquainnis 2025</span>
+                    <span>Powered by a static site - fast, secure, zero hosting costs</span>
+                </div>
+
+                <div class="go-top">
+                    <a class="smoothscroll" title="Back to Top" href="#top"><i class="icon-arrow-up" aria-hidden="true"></i></a>
+                </div>
+            </div>
+
+        </div> <!-- end footer-bottom -->
+
+    </footer> <!-- end footer -->
+
+
+    <!-- preloader
+    ================================================== -->
+    <div id="preloader">
+        <div id="loader">
+            <div class="line-scale-pulse-out">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
