@@ -43,7 +43,9 @@ jobs:
       - name: Force noindex on all preview pages
         run: |
           find site/preview -name '*.html' | while read -r f; do
-            if ! grep -qi 'name="robots"' "$f"; then
+            if grep -qi 'name="robots"' "$f"; then
+              sed -i -E 's/<meta name="robots" content="[^"]*"[^>]*>/<meta name="robots" content="noindex, nofollow">/Ig' "$f"
+            else
               sed -i 's/<head>/<head><meta name="robots" content="noindex, nofollow">/I' "$f"
             fi
           done
