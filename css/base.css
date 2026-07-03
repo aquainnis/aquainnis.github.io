@@ -21,7 +21,7 @@
     --s-5:clamp(80px,9vw,128px);    /* section rhythm */
   }
   *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth;overflow-x:clip}
+  html{scroll-behavior:smooth;scroll-padding-top:71px;overflow-x:clip}
   body{
     background:var(--bg);color:var(--ink);
     font-family:var(--body);font-size:clamp(16px,0.55vw + 13.5px,19px);line-height:1.6;
