@@ -1,5 +1,9 @@
 <p align="center">
-  <img src="images/aquainnis-logo-long.png" alt="Aquainnis" width="320">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="images/logo-brass.svg">
+    <source media="(prefers-color-scheme: light)" srcset="images/logo-light.svg">
+    <img src="images/logo-light.svg" alt="Aquainnis" width="320">
+  </picture>
 </p>
 
 <p align="center">
