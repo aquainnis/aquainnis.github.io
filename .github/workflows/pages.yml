@@ -1,61 +1,62 @@
-name: Deploy site (main) with dev preview
+name: Publish dev branch to /preview
+
+# Pushes to dev are copied into main's preview/ folder (with noindex
+# forced on every page). The normal GitHub Pages branch build on main
+# then serves it at https://aquainnis.com/preview/
+#
+# main itself deploys exactly as before: plain GitHub Pages from branch.
 
 on:
   push:
-    branches: [main, dev]
+    branches: [dev]
   workflow_dispatch:
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 
 concurrency:
-  group: pages
+  group: preview
   cancel-in-progress: true
 
 jobs:
-  deploy:
+  publish-preview:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Checkout main (live site)
+      - name: Checkout main
         uses: actions/checkout@v4
         with:
           ref: main
           path: site
 
-      - name: Add dev branch under /preview (if it exists)
+      - name: Checkout dev
+        uses: actions/checkout@v4
+        with:
+          ref: dev
+          path: devsrc
+
+      - name: Rebuild preview/ from dev
         run: |
-          if git ls-remote --exit-code --heads "https://github.com/${{ github.repository }}" dev >/dev/null 2>&1; then
-            git clone --depth 1 --branch dev "https://github.com/${{ github.repository }}" devsrc
-            mkdir -p site/preview
-            rsync -a --exclude '.git' --exclude '.github' devsrc/ site/preview/
-            echo "Preview built from dev branch."
-          else
-            echo "No dev branch found; deploying main only."
-          fi
+          rm -rf site/preview
+          mkdir -p site/preview
+          rsync -a --exclude '.git' --exclude '.github' --exclude 'preview' devsrc/ site/preview/
 
       - name: Force noindex on all preview pages
         run: |
-          if [ -d site/preview ]; then
-            find site/preview -name '*.html' | while read -r f; do
-              if ! grep -qi 'name="robots"' "$f"; then
-                sed -i 's/<head>/<head><meta name="robots" content="noindex, nofollow">/I' "$f"
-              fi
-            done
+          find site/preview -name '*.html' | while read -r f; do
+            if ! grep -qi 'name="robots"' "$f"; then
+              sed -i 's/<head>/<head><meta name="robots" content="noindex, nofollow">/I' "$f"
+            fi
+          done
+
+      - name: Commit preview to main
+        run: |
+          cd site
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add preview
+          if git diff --cached --quiet; then
+            echo "Preview unchanged; nothing to commit."
+          else
+            git commit -m "Update /preview from dev ($GITHUB_SHA)"
+            git push origin main
           fi
-
-      - name: Configure Pages
-        uses: actions/configure-pages@v5
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: site
-
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
