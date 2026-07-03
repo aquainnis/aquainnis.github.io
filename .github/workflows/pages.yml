@@ -1,0 +1,61 @@
+name: Deploy site (main) with dev preview
+
+on:
+  push:
+    branches: [main, dev]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout main (live site)
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: site
+
+      - name: Add dev branch under /preview (if it exists)
+        run: |
+          if git ls-remote --exit-code --heads "https://github.com/${{ github.repository }}" dev >/dev/null 2>&1; then
+            git clone --depth 1 --branch dev "https://github.com/${{ github.repository }}" devsrc
+            mkdir -p site/preview
+            rsync -a --exclude '.git' --exclude '.github' devsrc/ site/preview/
+            echo "Preview built from dev branch."
+          else
+            echo "No dev branch found; deploying main only."
+          fi
+
+      - name: Force noindex on all preview pages
+        run: |
+          if [ -d site/preview ]; then
+            find site/preview -name '*.html' | while read -r f; do
+              if ! grep -qi 'name="robots"' "$f"; then
+                sed -i 's/<head>/<head><meta name="robots" content="noindex, nofollow">/I' "$f"
+              fi
+            done
+          fi
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
